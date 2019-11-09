@@ -9,9 +9,12 @@ namespace Projeto.Teste._01.Utils
 {
     public class Screenshot
     {
-        public static void Create(IWebDriver driver)
+        public static void Create(IWebDriver driver, string fileName)
         {
             var take = driver as ITakesScreenshot;
+            var foto = take.GetScreenshot();
+
+            foto.SaveAsFile("c:\\temp\\" + fileName, ScreenshotImageFormat.Png);
         }
     }
 }
