@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Projeto.Teste._01.Models;
+using Projeto.Teste._01.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,6 +69,8 @@ namespace Projeto.Teste._01.Steps
 
         public string ObterMensagem()
         {
+            ScreenshotUtil.Create(webDriver, $"CriarContaDeCliente_{DateTime.Now.ToString("ddMMyyyHHmmss")}.png");
+
             var element = webDriver.FindElement(By.CssSelector("body > div > div > div.main-container.col2-left-layout > div > div.col-main > div > div > ul > li > ul > li > span"));
             return element.Text;
         }

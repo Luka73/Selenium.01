@@ -60,7 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\CriarContaDeClienteSteps.cs" />
     <Compile Include="Tests\CriarContaDeClienteTest.cs" />
-    <Compile Include="Utils\Screenshot.cs" />
+    <Compile Include="Utils\ScreenshotUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
